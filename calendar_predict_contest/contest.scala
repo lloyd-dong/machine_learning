@@ -71,9 +71,3 @@ val pt_28 = sqlContext.sql("select * from pvT where stat_date > \"20151127\"")
 pt_1_24.save("s3n://lloyd-hadoop/contest_out/pt_1_24",source="json")
 pt_25_27.save("s3n://lloyd-hadoop/contest_out/pt_25_27",source="json")
 pt_28.save("s3n://lloyd-hadoop/contest_out/pt_28_30",source="json")
-
-
-val onlyPV=sqlContext.sql("select count(*) from pvT where stat_date<\"20151128\" and isNull(praise)")
-onlyPV.count()
-// viewed/clicked but no praise 1
-

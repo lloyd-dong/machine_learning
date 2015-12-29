@@ -1,3 +1,28 @@
+//----------
+5/12/29 02:09:26 INFO RandomForest:   init: 76.004552693
+  total: 975.00306994
+  findSplitsBins: 36.486319005
+  findBestSplits: 898.443289388
+  chooseSplits: 898.325215239
+model: org.apache.spark.mllib.tree.model.RandomForestModel = 
+TreeEnsembleModel classifier with 100 trees
+
+
+    val labelAndPreds = trainingData.map { point =>
+     val prediction = model.predict(point.features)
+     (point.label, prediction)
+    }
+   val testErr = labelAndPreds.filter(r => r._1 != r._2).count.toDouble / trainingData.count()
+   //Double = 0.005955632964474791
+
+/------------------------
+val pt_25_27 = sqlContext.jsonFile("s3n://lloyd-hadoop/contest_out/pt_25_27/")
+pt_25_27.groupBy("praise").count.show
+//null: nnn
+//1: nn
+//2:nn
+
+
 log = pvf.filter(x =>x(5).toInt==0 && x(6).toInt==0).count().toString + ": 0 click and view records in PV" ::log
 0, no such data
 
