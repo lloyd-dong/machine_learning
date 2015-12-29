@@ -1,2 +1,5 @@
 
 .ipynb_checkpoints/calc_score-checkpoint.ipynb
+*.class
+*.jar
+*.DS_Store

@@ -1,4 +1,8 @@
-//tech spike
+import java.io.{File, PrintWriter}
+
+val writer = new PrintWriter(new File("s3n://lloyd-hadoop/outfile.txt" ))
+writer.write("Hello Scala")
+writer.close()
 
 /* tech: DataFrame
 	in EMR, spark-sql 1.3 uses DataFrame instead of SchemaRDD
