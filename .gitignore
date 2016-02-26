@@ -1,7 +1,8 @@
 
-.ipynb_checkpoints/calc_score-checkpoint.ipynb
+
 *.class
 *.jar
 *.DS_Store
 
-data_explorer/.ipynb_checkpoints/trainData-checkpoint.ipynb
+.ipynb_checkpoints/*
+data_explorer/.ipynb_checkpoints/*
