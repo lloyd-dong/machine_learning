@@ -1,5 +1,6 @@
 
-
+*.tgz
+*.tar
 *.class
 *.jar
 *.DS_Store
